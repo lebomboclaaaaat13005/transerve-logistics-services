@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLS Transerve Logistic Services | Trucking &amp; Freight Across Luzon</title>
+<meta name="description" content="Reliable trucking and freight hauling across Metro Manila and Luzon. Family-run, on-time, safe delivery. Request a quote from TLS Transerve Logistic Services.">
+
+<!--
+====================================================================
+  HOW TO EDIT THIS SITE
+  This whole page is one file. To change anything, just find the
+  text between the tags and retype it - no coding needed.
+  Each section below is marked with a comment like this one so you
+  can jump straight to the part you want to change (Ctrl+F the
+  all-caps label, e.g. "SERVICES SECTION").
+  Colors and fonts are all defined once, near the top of the
+  <style> block, under ":root" - change a color there and it
+  updates everywhere automatically.
+====================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ COLOR & TYPE TOKENS - edit here to restyle the whole site ============ */
+  :root{
+    --forest:#134D2E;      /* deep green, from the logo's road */
+    --sage:#6FAE6E;        /* light green, from the logo's letters */
+    --sage-dim:#8fbd8e;
+    --navy:#1E2A44;        /* navy, from "Transerve" wordmark */
+    --cream:#F6F5EE;       /* page background */
+    --paper:#FFFFFF;       /* card / panel background */
+    --sand:#C9A96B;        /* warm accent, used sparingly */
+    --ink:#20261F;         /* body text - soft near-black with a green cast */
+    --ink-soft:#535B4E;    /* secondary text */
+    --line:#DCD9CC;        /* hairline borders */
+    --radius:6px;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Outfit',system-ui,sans-serif;
+    color:var(--navy);
+    margin:0;
+    line-height:1.1;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:88px 0;}
+  @media (max-width:720px){ section{padding:56px 0;} }
+
+  .eyebrow{
+    font-family:'Outfit',sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--forest);
+    margin:0 0 10px 0;
+  }
+  .lede{color:var(--ink-soft); font-size:1.08rem; max-width:640px;}
+
+  /* ============ NAV ============ */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,245,238,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar{
+    max-width:var(--maxw); margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand img{height:40px; width:auto;}
+  nav ul{list-style:none; display:flex; gap:28px; margin:0; padding:0;}
+  nav a{
+    text-decoration:none; font-weight:500; font-size:0.95rem; color:var(--navy);
+    padding:6px 2px; border-bottom:2px solid transparent;
+  }
+  nav a:hover{border-bottom-color:var(--sage);}
+  .nav-cta{
+    background:var(--forest); color:#fff !important; padding:10px 20px;
+    border-radius:var(--radius); font-weight:600; font-size:0.9rem;
+    border-bottom:none !important;
+  }
+  .nav-cta:hover{background:#0e3d24;}
+  .menu-toggle{display:none;}
+  @media (max-width:860px){
+    nav ul{display:none;}
+    .menu-toggle{display:block; background:none; border:1px solid var(--line); border-radius:6px; padding:8px 12px; font-size:1.2rem;}
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:100px 0 70px;
+    background:var(--paper);
+  }
+  .hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+  @media (max-width:900px){ .hero .wrap{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem); font-weight:700; letter-spacing:-0.01em;}
+  .hero .lede{margin-top:18px; font-size:1.15rem;}
+  .hero-actions{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:14px 26px; border-radius:var(--radius);
+    font-weight:600; text-decoration:none; font-size:0.98rem; border:1px solid transparent;
+    transition:transform .15s ease;
+  }
+  .btn:active{transform:scale(0.98);}
+  .btn-primary{background:var(--forest); color:#fff;}
+  .btn-primary:hover{background:#0e3d24;}
+  .btn-ghost{border-color:var(--navy); color:var(--navy);}
+  .btn-ghost:hover{background:var(--navy); color:#fff;}
+
+  .hero-visual{position:relative; height:340px;}
+  .hero-visual svg{width:100%; height:100%;}
+  .route-draw{stroke-dasharray:900; stroke-dashoffset:900; animation:draw 1.8s ease forwards .3s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @media (prefers-reduced-motion:reduce){ .route-draw{animation:none; stroke-dashoffset:0;} }
+
+  .stat-strip{
+    border-top:1px solid var(--line); margin-top:64px; padding-top:36px;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
+  }
+  @media (max-width:720px){ .stat-strip{grid-template-columns:repeat(2,1fr);} }
+  .stat-strip .num{font-family:'Outfit',sans-serif; font-weight:700; font-size:2rem; color:var(--forest);}
+  .stat-strip .label{color:var(--ink-soft); font-size:0.92rem; margin-top:4px;}
+
+  /* ============ SECTION HEADERS ============ */
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);}
+
+  /* ============ OVERVIEW / MISSION-VISION ============ */
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
+  @media (max-width:760px){ .split{grid-template-columns:1fr;} }
+  .split-card{
+    border-top:3px solid var(--sage);
+    padding-top:20px;
+  }
+  .split-card h3{font-size:1.2rem; margin-bottom:10px;}
+  .split-card p{color:var(--ink-soft);}
+
+  /* ============ SERVICES ============ */
+  .services{border-top:1px solid var(--line);}
+  .service-row{
+    display:grid; grid-template-columns:56px 1fr; gap:20px;
+    padding:28px 0; border-bottom:1px solid var(--line);
+  }
+  .service-row:first-of-type{border-top:1px solid var(--line);}
+  .service-icon{
+    width:52px; height:52px; border-radius:50%;
+    background:#EAF3E9; display:flex; align-items:center; justify-content:center;
+    color:var(--forest);
+  }
+  .service-row h3{font-size:1.15rem; margin-bottom:6px;}
+  .service-row p{color:var(--ink-soft); margin:0; max-width:560px;}
+
+  /* ============ FLEET TABLE ============ */
+  .fleet-table{width:100%; border-collapse:collapse; margin-top:8px;}
+  .fleet-table th{
+    text-align:left; font-family:'Outfit',sans-serif; font-weight:600; color:var(--navy);
+    padding:14px 16px; border-bottom:2px solid var(--navy); font-size:0.92rem;
+  }
+  .fleet-table td{
+    padding:18px 16px; border-bottom:1px solid var(--line); color:var(--ink-soft);
+  }
+  .fleet-table tr td:first-child{color:var(--ink); font-weight:600;}
+  .fleet-note{margin-top:16px; font-size:0.92rem; color:var(--ink-soft);}
+
+  /* ============ COVERAGE ============ */
+  .coverage{background:var(--forest); color:#EFF5EE;}
+  .coverage h2{color:#fff;}
+  .coverage .lede{color:#CFE3CE;}
+  .coverage-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-top:20px;}
+  @media (max-width:820px){ .coverage-grid{grid-template-columns:1fr;} }
+  .region-list{list-style:none; margin:0; padding:0; display:grid; gap:14px;}
+  .region-list li{
+    display:flex; align-items:center; gap:12px;
+    padding:14px 18px; background:rgba(255,255,255,0.07);
+    border-radius:var(--radius); border:1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ============ WHY US ============ */
+  .why-list{list-style:none; margin:0; padding:0;}
+  .why-list li{
+    display:grid; grid-template-columns:32px 1fr; gap:18px;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .why-list li:last-child{border-bottom:1px solid var(--line);}
+  .why-list h3{font-size:1.08rem; margin-bottom:4px;}
+  .why-list p{margin:0; color:var(--ink-soft);}
+
+  /* ============ INDUSTRIES ============ */
+  .chips{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;}
+  .chip{
+    padding:10px 18px; border:1px solid var(--forest); color:var(--forest);
+    border-radius:999px; font-size:0.92rem; font-weight:500;
+  }
+
+  /* ============ PERMITS ============ */
+  .permits{display:flex; flex-wrap:wrap; gap:18px; margin-top:8px;}
+  .permit-badge{
+    display:flex; flex-direction:column; gap:4px;
+    padding:16px 22px; background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius); min-width:220px;
+  }
+  .permit-badge .k{font-size:0.8rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft);}
+  .permit-badge .v{font-family:'Outfit',sans-serif; font-weight:600; color:var(--navy);}
+
+  /* ============ CONTACT / QUOTE ============ */
+  .contact-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px;}
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
+  form{display:grid; gap:16px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:520px){ .form-row{grid-template-columns:1fr;} }
+  label{font-size:0.88rem; font-weight:600; color:var(--navy); display:block; margin-bottom:6px;}
+  input,textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius);
+    font-family:'Inter',sans-serif; font-size:0.98rem; background:var(--paper); color:var(--ink);
+  }
+  input:focus,textarea:focus{outline:2px solid var(--sage); outline-offset:1px; border-color:var(--sage);}
+  textarea{resize:vertical; min-height:110px;}
+  .submit-btn{justify-self:start; margin-top:4px;}
+
+  .contact-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    padding:32px; height:fit-content;
+  }
+  .contact-card h3{font-size:1.15rem; margin-bottom:18px;}
+  .contact-item{display:grid; grid-template-columns:24px 1fr; gap:12px; margin-bottom:18px; align-items:start;}
+  .contact-item .lbl{font-size:0.82rem; color:var(--ink-soft); margin-bottom:2px;}
+  .contact-item .val{font-weight:500;}
+  .contact-item a{text-decoration:none; color:var(--forest);}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--navy); color:#CBD2C9; padding:44px 0 28px;
+  }
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; align-items:center;}
+  .footer-grid img{height:30px;}
+  footer .fine{font-size:0.85rem; color:#8C96A6; margin-top:24px; border-top:1px solid rgba(255,255,255,0.1); padding-top:18px;}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header>
+  <div class="navbar">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="TLS Transerve Logistic Services logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO SECTION - edit headline / subtext here ===================== -->
+<div id="top" class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Trucking &amp; Freight · Metro Manila &amp; Luzon-wide</p>
+      <h1>Moving your business forward, one delivery at a time.</h1>
+      <p class="lede">TLS Transerve Logistic Services is a family-run trucking company based in Valenzuela City, hauling freight safely and on time across Metro Manila and the whole of Luzon.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Quotation</a>
+        <a href="#services" class="btn btn-ghost">See What We Do</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="route-draw" d="M40 300 C 120 300, 100 180, 180 150 C 260 120, 240 60, 340 40"
+              stroke="#134D2E" stroke-width="10" stroke-linecap="round"/>
+        <path class="route-draw" d="M40 300 C 120 300, 100 180, 180 150 C 260 120, 240 60, 340 40"
+              stroke="#6FAE6E" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+        <circle cx="40" cy="300" r="9" fill="#134D2E"/>
+        <circle cx="340" cy="40" r="9" fill="#6FAE6E"/>
+        <g transform="translate(150,175)">
+          <rect x="0" y="10" width="56" height="30" rx="3" fill="#1E2A44"/>
+          <rect x="-26" y="0" width="30" height="40" rx="3" fill="#1E2A44"/>
+          <rect x="-22" y="6" width="20" height="14" rx="2" fill="#EFF5EE"/>
+          <circle cx="-14" cy="42" r="7" fill="#20261F"/>
+          <circle cx="34" cy="42" r="7" fill="#20261F"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="stat-strip" style="grid-column:1/-1;">
+      <div><div class="num">Luzon</div><div class="label">Wide coverage area</div></div>
+      <div><div class="num">1-3.5T</div><div class="label">Fleet capacity per truck</div></div>
+      <div><div class="num">DTI +</div><div class="label">LTFRB accredited</div></div>
+      <div><div class="num">100%</div><div class="label">Family-run &amp; direct</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== OVERVIEW / MISSION & VISION - edit paragraph text here ===================== -->
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Who We Are</p>
+      <h2>A trucking partner built on family values.</h2>
+      <p class="lede">TLS Transerve Logistic Services provides dependable land transport for businesses across Metro Manila and Luzon. We combine hands-on service with a commitment to safe, on-time delivery for every load we carry.</p>
+    </div>
+    <div class="split">
+      <div class="split-card">
+        <h3>Mission</h3>
+        <p>To deliver every shipment safely, on time, and with the reliability our clients can build their operations around.</p>
+      </div>
+      <div class="split-card">
+        <h3>Vision</h3>
+        <p>To be a leading trucking and logistics partner in Luzon, known for trust, efficiency, and long-term client relationships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES SECTION - edit service names/descriptions here ===================== -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What We Do</p>
+      <h2>Services built around your freight.</h2>
+    </div>
+
+    <div class="service-row">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 7h11v9H3z" stroke="currentColor" stroke-width="1.6"/><path d="M14 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="18" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="1.6" stroke="currentColor" stroke-width="1.6"/></svg>
+      </div>
+      <div>
+        <h3>Trucking &amp; freight hauling</h3>
+        <p>Full truckload and part truckload hauling for cargo of all sizes, handled with the same care every trip.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+      </div>
+      <div>
+        <h3>Point-to-point delivery</h3>
+        <p>Direct routes across Metro Manila and Luzon-wide, planned to get your cargo where it needs to be without delay.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <h3>Scheduled &amp; on-demand transport</h3>
+        <p>Book a regular schedule for recurring loads, or reach out on-demand when a shipment comes up unplanned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FLEET SECTION - edit truck specs here ===================== -->
+<section id="fleet">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Fleet</p>
+      <h2>Right-sized for urban and provincial freight.</h2>
+    </div>
+    <table class="fleet-table">
+      <thead>
+        <tr><th>Truck Type</th><th>Capacity</th><th>Qty</th><th>Typical Use</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>6-Wheeler Closed Van (2025 Fuso FE84)</td>
+          <td>Up to 3.5 tons</td>
+          <td>1</td>
+          <td>Urban and provincial delivery</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="fleet-note">Fleet is growing - reach out for current availability on your preferred dates.</p>
+  </div>
+</section>
+
+<!-- ===================== COVERAGE SECTION - edit region list here ===================== -->
+<section id="coverage" class="coverage">
+  <div class="wrap">
+    <div class="coverage-grid">
+      <div>
+        <p class="eyebrow" style="color:#A9D2A7;">Where We Go</p>
+        <h2>Based in Valenzuela City. Reaching every point in Luzon.</h2>
+        <p class="lede" style="margin-top:14px;">Whether it's a same-day Metro Manila run or a long-haul provincial delivery, our routes are planned to keep your freight moving.</p>
+      </div>
+      <ul class="region-list">
+        <li>Metro Manila</li>
+        <li>Central Luzon</li>
+        <li>Calabarzon</li>
+        <li>Ilocos Region</li>
+        <li>Bicol Region</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US - edit reasons here ===================== -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why Choose TLS</p>
+      <h2>Personal service, professional delivery.</h2>
+    </div>
+    <ul class="why-list">
+      <li>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 21c-4.5-2.6-7-6-7-10V6l7-3 7 3v5c0 4-2.5 7.4-7 10z" stroke="#134D2E" stroke-width="1.6"/></svg>
+        <div><h3>Family-run business</h3><p>Personalized service and direct accountability - you deal with us, not a call center.</p></div>
+      </li>
+      <li>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3.5 2" stroke="#134D2E" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#134D2E" stroke-width="1.6"/></svg>
+        <div><h3>On-time, safe delivery</h3><p>Every shipment is our focus, from pickup to drop-off.</p></div>
+      </li>
+      <li>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 17V9l8-4 8 4v8" stroke="#134D2E" stroke-width="1.6"/><path d="M4 17h16" stroke="#134D2E" stroke-width="1.6"/></svg>
+        <div><h3>Competitive, transparent rates</h3><p>Straightforward pricing with no hidden charges.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== INDUSTRIES - edit tags here ===================== -->
+<section id="industries" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:20px;">
+      <p class="eyebrow">Who We Serve</p>
+      <h2>Industries we work with.</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">Retail &amp; FMCG</span>
+      <span class="chip">Consumer Goods</span>
+      <span class="chip">Industrial &amp; Manufacturing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PERMITS - edit numbers here ===================== -->
+<section id="permits" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:20px;">
+      <p class="eyebrow">Permits &amp; Compliance</p>
+      <h2>Registered and accredited.</h2>
+    </div>
+    <div class="permits">
+      <div class="permit-badge"><span class="k">Business Registration</span><span class="v">DTI No. 7322979</span></div>
+      <div class="permit-badge"><span class="k">LTFRB Accreditation</span><span class="v">Case No. 2026-00112</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / QUOTE FORM =====================
+     This form sends straight to your email using a free service
+     called FormSubmit - no website backend needed.
+
+     IMPORTANT ONE-TIME STEP: the very first time someone submits
+     this form, FormSubmit will send an email to
+     transervelogisticsservices@gmail.com asking you to confirm/
+     activate the form. Just click "Confirm" in that email once,
+     and every submission after that will land in the inbox
+     automatically. You can also send a test submission yourself
+     right after publishing the site to trigger that confirmation.
+==================================================================== -->
+<section id="contact" style="background:var(--paper); border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Ready to move your freight? Send us the details.</h2>
+      <p class="lede">Fill out the form and it goes directly to our email - or reach us by phone or Facebook.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form action="https://formsubmit.co/transervelogisticsservices@gmail.com" method="POST">
+        <!-- FormSubmit settings - safe to leave these as they are -->
+        <input type="hidden" name="_subject" value="New Quotation Request - TLS Transerve Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-row">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Name" required>
+          </div>
+          <div>
+            <label for="company">Company (optional)</label>
+            <input type="text" id="company" name="Company">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" required>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="pickup">Pickup Location</label>
+            <input type="text" id="pickup" name="Pickup Location" required>
+          </div>
+          <div>
+            <label for="dropoff">Drop-off Location</label>
+            <input type="text" id="dropoff" name="Drop-off Location" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Cargo Details / Message</label>
+          <textarea id="message" name="Message" placeholder="e.g. type of cargo, weight, preferred date" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">Send Quotation Request</button>
+      </form>
+
+      <div class="contact-card">
+        <h3>Contact Details</h3>
+
+        <div class="contact-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#134D2E" stroke-width="1.4"/><path d="M4 6l8 7 8-7" stroke="#134D2E" stroke-width="1.4"/></svg>
+          <div>
+            <div class="lbl">Email</div>
+            <a class="val" href="mailto:transervelogisticsservices@gmail.com">transervelogisticsservices@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2C11.6 20 4 12.4 4 5a2 2 0 0 1 2-2z" stroke="#134D2E" stroke-width="1.4"/></svg>
+          <div>
+            <div class="lbl">Phone</div>
+            <div class="val">0945 254 2321 / 0908 330 7837</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z" stroke="#134D2E" stroke-width="1.4"/><circle cx="12" cy="10" r="2.2" stroke="#134D2E" stroke-width="1.4"/></svg>
+          <div>
+            <div class="lbl">Address</div>
+            <div class="val">B4 Lot 9 Ecotrend Phase 5, Ligas 3, Bacoor City, Cavite</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#134D2E" stroke-width="1.4"/><path d="M13 20v-6h2l.3-2.5H13V9.8c0-.9.3-1.5 1.6-1.5H15V6.1C14.7 6 13.9 6 13 6c-2.1 0-3.5 1.3-3.5 3.6V11.5H7.5V14H9.5v6h2z" fill="#134D2E"/></svg>
+          <div>
+            <div class="lbl">Facebook</div>
+            <a class="val" href="https://www.facebook.com/share/1CPeAEFmho/?mibextid=wwXIfr" target="_blank" rel="noopener">TLS Transerve Logistic Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <img src="assets/logo.png" alt="TLS Transerve logo" style="filter:brightness(0) invert(1);">
+      <div>Valenzuela City, Philippines</div>
+      <div><a href="mailto:transervelogisticsservices@gmail.com">transervelogisticsservices@gmail.com</a></div>
+    </div>
+    <div class="fine">&copy; <span id="year"></span> TLS Transerve Logistic Services. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
